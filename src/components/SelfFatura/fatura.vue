@@ -27,8 +27,10 @@
             <v-icon center>mdi-close</v-icon>
           </span>
         </v-btn>
-        <v-btn color="primary" class="mr-2" small dark @click="Kaydet('yeni_satir')"> <v-icon left>mdi-file-document</v-icon>Yeni Satır </v-btn>
-        <v-btn color="primary" small @click="Kaydet('kaydet')"> <v-icon left>mdi-content-save</v-icon>Fatura Kaydet </v-btn>
+        <v-btn color="primary" class="mr-2" small dark @click="Kaydet('yeni_satir')"> <v-icon
+            left>mdi-file-document</v-icon>Yeni Satır </v-btn>
+        <v-btn color="primary" small @click="Kaydet('kaydet')"> <v-icon left>mdi-content-save</v-icon>Fatura Kaydet
+        </v-btn>
       </v-toolbar>
 
       <!-- card text -->
@@ -54,19 +56,11 @@
                 <v-card class="pa-0" outlined tile>
                   <v-menu dense :close-on-content-click="true" :nudge-right="0" transition="scale-transition" offset-y>
                     <template v-slot:activator="{ on, attrs }">
-                      <v-text-field
-                        v-model="compSecilenFtTarih"
-                        label="Fatura Tarihi"
-                        prepend-icon="mdi-calendar-today"
-                        readonly
-                        locale="tr-TR"
-                        v-bind="attrs"
-                        v-on="on"
-                        hide-details
-                        class="ma-1"
-                      />
+                      <v-text-field v-model="compSecilenFtTarih" label="Fatura Tarihi" prepend-icon="mdi-calendar-today"
+                        readonly locale="tr-TR" v-bind="attrs" v-on="on" hide-details class="ma-1" />
                     </template>
-                    <v-date-picker v-model="masterEditedItem.FTTARIH" no-title :first-day-of-week="1" color="red accent-3" locale="tr-TR" />
+                    <v-date-picker v-model="masterEditedItem.FTTARIH" no-title :first-day-of-week="1"
+                      color="red accent-3" locale="tr-TR" />
                   </v-menu>
                 </v-card>
               </v-col>
@@ -82,14 +76,8 @@
               </v-col>
               <v-col sm="6">
                 <v-card class="pa-0" outlined tile>
-                  <v-text-field
-                    v-model="masterEditedItem._CRISIM"
-                    label="Cari İsim"
-                    hide-details
-                    class="ma-1 red--text"
-                    :append-icon="'mdi-comment-question-outline'"
-                    @click:append="getCari()"
-                  />
+                  <v-text-field v-model="masterEditedItem._CRISIM" label="Cari İsim" hide-details class="ma-1 red--text"
+                    :append-icon="'mdi-comment-question-outline'" @click:append="getCari()" />
                 </v-card>
               </v-col>
               <v-col sm="2">

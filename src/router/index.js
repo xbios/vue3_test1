@@ -20,7 +20,8 @@ const router = createRouter({
     {
       path: "/fatura",
       name: "fatura",
-      component: () => import("../views/Fatura.vue"),
+      //component: () => import("../views/Fatura.vue"),
+      component: () => import("../components/SelfFatura/fatura.vue"),
     },
 
     //fatura
